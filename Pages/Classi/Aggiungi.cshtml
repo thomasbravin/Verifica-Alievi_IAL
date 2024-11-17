@@ -1,0 +1,33 @@
+﻿@page
+@model Alievi_IAL.Pages.Classi.AggiungiModel
+@{
+}
+<h1>Aggiungi alievo</h1>
+<form method="post">
+    
+
+    <div>
+        <label class="form-label">Nome</label>
+        <input class="form-control" name="Nome" value="@Model.alievo.Nome" />
+    </div>
+
+    <div>
+        <label class="form-label">Cognome</label>
+        <input class="form-control" name="Cognome" value="@Model.alievo.Cognome" />
+    </div>
+
+    <div>
+        <label class="form-label">DataNascita</label>
+        <input class="form-control" type="date" name="DataNascita" value="@Model.alievo.DataNascita" />
+    </div>
+
+    <div>
+        <label class="form-label">Classe</label>
+        <input class="form-control" name="Classe" value="@Model.alievo.Classe" />
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-primary">Salva</button>
+        <a href="/Classi/Visualizza" class="btn btn-danger">Annulla</a>
+    </div>
+</form>

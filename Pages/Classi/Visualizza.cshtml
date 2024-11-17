@@ -1,0 +1,38 @@
+﻿@page
+@model Alievi_IAL.Pages.Classi.VisualizzaModel
+@{
+}
+<div>
+    <table class="table table-hover table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>DataNascita</th>
+                <th>Classe</th>
+                <th>Modifica</th>
+                <th>Elimina</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model.Alievo)
+        {
+            <tbody>
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Nome</td>
+                        <td>@item.Cognome</td>
+                        <td>@item.DataNascita.ToShortDateString()</td>
+                        <td>@item.Classe</td>
+                        <td>
+                            <a href="/Classi/Modifica?Id=@item.Id" class="btn btn-primary">Modifica</a>
+                        </td>
+                        <td>
+                            <a href="/Classi/Elimina?Id=@item.Id" class="btn btn-danger">Elimina</a>
+                        </td>
+                    </tr>
+            </tbody>
+        }
+    </table>
+    <a href="/Classi/Aggiungi" class="btn btn-primary">Aggiungi</a>
+</div>
